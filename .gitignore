@@ -1,0 +1,16 @@
+build/
+Build/
+Debug/
+Release/
+.vs/
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.lib
+*.dll
+*.o
+*.a
