@@ -11,18 +11,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # --- Encontrar TODOS os .cpp e .h recursivamente ---
 
 file(GLOB_RECURSE SOURCES
-    "${CMAKE_CURRENT_SOURCE_DIR}/Jogo_TecProg_2024/Source/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Jogo_TecProg_Final/Source/*.cpp"
 )
 
 file(GLOB_RECURSE HEADERS
-    "${CMAKE_CURRENT_SOURCE_DIR}/Jogo_TecProg_2024/Include/*.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Jogo_TecProg_Final/Include/*.h"
 )
 
 add_executable(JogoTecProg ${SOURCES} ${HEADERS})
 
 # Diz pro compilador onde estão os .h
 target_include_directories(JogoTecProg PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/Jogo_TecProg_2024/Include
+    ${CMAKE_CURRENT_SOURCE_DIR}/Jogo_TecProg_Final/Include
 )
 
 # --- Configuração do SFML (Pasta Única) ---
@@ -67,7 +67,7 @@ add_custom_target(run
 
 # Copiar assets para o diretório de build para que o executável encontre recursos
 # quando executado a partir de build/ (evita problemas com caminhos relativos).
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+#file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 # --- Específico para Windows: Copiar DLLs ---
 
