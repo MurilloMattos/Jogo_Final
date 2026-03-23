@@ -23,7 +23,7 @@ Fases::Fase_2::Fase_2() {
 
 	//entre 3 a 4
 	num_espinhos = (rand()%1) + 3;
-	//num_espinhos = 0;
+	num_espinhos = 0;
 
 	num_restante_capitoes = num_capitoes;
 	num_restante_piratas = num_piratas;

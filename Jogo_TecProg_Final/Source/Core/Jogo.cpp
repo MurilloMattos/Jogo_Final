@@ -11,9 +11,9 @@ Ger_Graf(),
 jogador_1(),
 jogador_2(),
 fase1(),
-menu(new Menu(this)),
-fase2(),
-estado(Estado::MENU)
+//menu(new Menu(this)),
+fase2()
+//estado(Estado::MENU)
 
 {
 
@@ -23,7 +23,7 @@ estado(Estado::MENU)
 
 	//inicialação das fases corrigida, agora função Atualiza chama setar_Fase quando necessário
     fase_1_ativa = false;
-    fase_2_ativa = false;
+    fase_2_ativa = true;
 
     fase1.Setar_Jogadores(&jogador_1, &jogador_2);
     fase2.Setar_Jogadores(&jogador_1, &jogador_2);
@@ -33,16 +33,19 @@ estado(Estado::MENU)
 
 Jogo::~Jogo()
 {
-    delete menu;
+    //delete menu;
 }
 
+/*
 void Jogo::setEstado(Estado novoEstado) {
-    estado = novoEstado;
+    //estado = novoEstado;
 }
+
 
 Estado Jogo::getEstado() const {
-    return estado;
+    //return estado;
 }
+*/
 
 void Jogo::set_pJog2_Dois_Jogadores(bool valor) {
     jogador_2.setar_Dois_Jogadores(valor);
@@ -78,8 +81,19 @@ void Jogo::Executar()
 
         Ger_Graf->getJanela()->clear();
 
+        if(fase_1_ativa){
+        atualiza_Camera();
+        setar_Fase();
 
-        EstadoDoJogo();
+        verifica_Fim_De_Jogo();
+        }
+        else if(fase_2_ativa){
+            atualiza_Camera();
+            setar_Fase();
+
+            verifica_Fim_De_Jogo();
+        }
+        //EstadoDoJogo();
 
         Ger_Graf->getJanela()->display();
 
@@ -99,6 +113,7 @@ void Jogo::Executar()
     }
 }
 
+/*
 void Jogo::EstadoDoJogo() {//executa o estado atual do jogo
 
     if(estado == Estado::MENU) {
@@ -130,6 +145,7 @@ void Jogo::EstadoDoJogo() {//executa o estado atual do jogo
         //salvar o jogo ou mostrar a tela de fim de jogo
 	}
 }
+*/
 
 void Jogo::verifica_Fim_De_Jogo()
 {

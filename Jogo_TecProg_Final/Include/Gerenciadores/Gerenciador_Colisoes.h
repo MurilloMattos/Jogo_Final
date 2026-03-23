@@ -23,7 +23,7 @@ namespace Gerenciadores {
 		float empurrao;
 
 
-		// contador setado, pra evitar ser criado varias vezes durante a execu�ao do programa.
+		// contador setado, pra evitar ser criado varias vezes durante a execuçao do programa.
 		const int direita, cima, esquerda, baixo;
 
 	private:

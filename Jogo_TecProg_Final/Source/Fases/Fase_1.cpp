@@ -46,7 +46,7 @@ void Fases::Fase_1::Cria_Obstaculos() {
 
 	Cria_Piso();
 	Cria_Plataforma();
-	Cria_Esteira();
+	//Cria_Esteira();
 
 }
 
@@ -60,28 +60,28 @@ void Fases::Fase_1::Cria_Inimigos() {
 		int sorteio = rand() % 6;
 
 		if(sorteio == 0){
-			Cria_Esmagador(100.f, pos_Piso.y);
+			//Cria_Esmagador(100.f, pos_Piso.y);
 		}
 		else if(sorteio == 1){
-			Cria_Esmagador(300.f, pos_Piso.y);
+			//Cria_Esmagador(300.f, pos_Piso.y);
 		}
 		else if(sorteio == 2){
-			Cria_Esmagador(500.f, pos_Piso.y);
+			//Cria_Esmagador(500.f, pos_Piso.y);
 		}
 		else if (sorteio == 3){
-			Cria_Esmagador(-100.f, pos_Piso.y);
+			//Cria_Esmagador(-100.f, pos_Piso.y);
 		}
 		else if(sorteio == 4){
-			Cria_Esmagador(-300.f, pos_Piso.y);
+			//Cria_Esmagador(-300.f, pos_Piso.y);
 		}
 		else {
-			Cria_Esmagador(-500.f, pos_Piso.y);
+			//Cria_Esmagador(-500.f, pos_Piso.y);
 		}
 
 		i++;
 	}
 
-	int num_piratas = lista_plat.size();
+	int num_piratas = static_cast<int>(lista_plat.size());
 
 	for(int i = 0; i < num_piratas; i++){
 		Cria_Pirata(lista_plat[i]->get_X() + 10.f, lista_plat[i]->get_Y() - 40.f, lista_plat[i]->get_X(), lista_plat[i]->get_X() + lista_plat[i]->get_Largura() - 20.f);
@@ -162,6 +162,7 @@ void Fases::Fase_1::Cria_Plataforma() {
 	
 }
 
+/*
 void Fases::Fase_1::Cria_Esteira() {
 
 	int i = 0;
@@ -200,6 +201,7 @@ void Fases::Fase_1::Cria_Esteira() {
 
 }
 
+
 void Fases::Fase_1::Cria_Esmagador(float x, float y) {
 
 	Esmagador* esmagador;
@@ -211,7 +213,7 @@ void Fases::Fase_1::Cria_Esmagador(float x, float y) {
 	lista_id_inimigos.push_front(esmagador->getId());
 
 }
-
+*/
 
 void Fases::Fase_1::setar_Camera_Fase()
 {

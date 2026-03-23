@@ -6,7 +6,7 @@
 #include "Fases/Fase_2.h"
 #include "Core/Menu.h"
 
-enum class Estado { MENU, FASE_1, FASE_2 };
+//enum class Estado { MENU, FASE_1, FASE_2 };
 
 class Jogo
 {
@@ -15,8 +15,8 @@ class Jogo
 
 		Entidades::Personagens::Jogador jogador_1;
 		Entidades::Personagens::Jogador jogador_2;
-		Menu *menu;
-		Estado estado;
+		//Menu *menu;
+		//Estado estado;
 
 		Fases::Fase_1 fase1;
 		Fases::Fase_2 fase2;
@@ -31,13 +31,13 @@ class Jogo
 
 		void Executar();
 
-		void setEstado(Estado novoEstado);
-		Estado getEstado() const;
+		//void setEstado(Estado novoEstado);
+		//Estado getEstado() const;
 		void set_pJog2_Dois_Jogadores(bool valor);
 		bool get_pJog2_Dois_Jogadores();
 		void setar_Fase();
 		void atualiza_Camera();
-		void EstadoDoJogo();
+		//void EstadoDoJogo();
 		void verifica_Fim_De_Jogo();
 
 };

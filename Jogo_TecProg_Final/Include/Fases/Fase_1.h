@@ -1,9 +1,9 @@
 #pragma once
 
 #include "Fases/Fase.h"
-#include "Entidades/Obstaculos/Esteira.h"
+//#include "Entidades/Obstaculos/Esteira.h"
 #include "Entidades/Personagens/Inimigos/Capitao.h"
-#include "Entidades/Personagens/Inimigos/Esmagador.h"
+//#include "Entidades/Personagens/Inimigos/Esmagador.h"
 #include "Entidades/Projetil.h"
 
 namespace Fases{
@@ -17,7 +17,7 @@ namespace Fases{
 		
 		std::vector<Entidades::Obstaculos::Plataforma*> lista_plat;
 		
-		Entidades::Obstaculos::Esteira* esteira;
+		//Entidades::Obstaculos::Esteira* esteira;
 
 	public:
 
@@ -31,9 +31,9 @@ namespace Fases{
 
 		void Cria_Piso();
 		void Cria_Plataforma();
-		void Cria_Esteira();
+		//void Cria_Esteira();
 
-		void Cria_Esmagador(float x, float y);
+		//void Cria_Esmagador(float x, float y);
 
 		void atualiza_Camera_Fase(Entidades::Personagens::Jogador* p_jogador1, Entidades::Personagens::Jogador* p_jogador2);
 		void setar_Camera_Fase();
