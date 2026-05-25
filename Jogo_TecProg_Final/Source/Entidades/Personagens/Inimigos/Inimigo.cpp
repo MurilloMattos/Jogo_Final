@@ -4,9 +4,9 @@ using namespace Entidades;
 using namespace Personagens;
 
 
-Inimigo::Inimigo() :semente_id_entidade(100), direcao(0){
-	
-	setId(semente_id_entidade);
+Inimigo::Inimigo() : Personagem(id_base), direcao(0){
+
+
 	ponteiro_jogador1 = nullptr;
 	ponteiro_jogador2 = nullptr;
 
@@ -125,3 +125,5 @@ void Inimigo::dar_Pontuacao_a_Jogadores() {
 	}
 	
 }*/
+
+const int Inimigo::id_base(100);

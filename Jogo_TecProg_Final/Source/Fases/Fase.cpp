@@ -5,7 +5,7 @@ using namespace Entidades;
 using namespace Obstaculos;
 using namespace Personagens;
 
-Fase::Fase() {
+Fase::Fase(): Ente(0) {
 
 	srand(static_cast<unsigned int>(time(0)));
 	num_plataformas_totais = rand() % 7;

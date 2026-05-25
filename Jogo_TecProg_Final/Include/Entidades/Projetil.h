@@ -13,16 +13,17 @@ namespace Entidades {
 
 	class Projetil : public Entidade
 	{
-		const int semente_id_entidade;
-		bool ativo;
-		int lado;
-		int dano;
-		int tempo_de_vida;
-		int tempo_ativo;
-		bool atingiu_jogador;
+		private:
+			static const int id_base;
+			bool ativo;
+			int lado;
+			int dano;
+			int tempo_de_vida;
+			int tempo_ativo;
+			bool atingiu_jogador;
 
-		
-		Entidades::Personagens::Capitao* cap;
+			Entidades::Entidade* proprietario;
+			//Entidades::Personagens::Capitao* cap;
 
 		//const int direita, cima, esquerda, baixo;
 
@@ -37,7 +38,7 @@ namespace Entidades {
 		void setar_Ativo(bool atv);
 		void setar_Dano(int dan);
 		void setar_Direcao(int direcao);
-		void setar_Capitao(Entidades::Personagens::Capitao* capitao);
+		void setar_Proprietario(Entidades::Entidade* propriet);
 
 		int get_Dano();
 		bool get_Ativo();

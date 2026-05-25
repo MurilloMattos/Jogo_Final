@@ -8,11 +8,13 @@ namespace Entidades {
 		class Capitao : public Inimigo
 		{
 
+			short int forca;
 			bool disparou;
 			int recarga;
 			int espera;
 			bool pode_disparar;
 			bool parar;
+			
 
 			sf::Vector2f visao;
 

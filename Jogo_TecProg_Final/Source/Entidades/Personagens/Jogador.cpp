@@ -3,10 +3,10 @@
 using namespace Entidades;
 using namespace Personagens;
 
-Jogador::Jogador() : semente_id_entidade(10) {
+Jogador::Jogador() : Personagem(id_base) {
 
 	//arrumar isso posteriormente
-	setId(semente_id_entidade);
+	//setId(semente_id_entidade);
 
 	segundo_jogador = false;
 	estado_pulando = false;
@@ -213,3 +213,5 @@ void Jogador::setar_Bateu_A_Cabeca(){
 	velocidade.y = 0;
 	acelerando = false;
 }
+
+const int Jogador::id_base(10);

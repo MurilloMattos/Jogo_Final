@@ -9,8 +9,8 @@ namespace Entidades {
 		class Obstaculo : public Entidade
 		{
 			protected:
-				bool agressivo;
-				const int semente_id_entidade;
+				bool danoso;
+				static const int id_base;
 
 				sf::Vector2f tamanho;
 

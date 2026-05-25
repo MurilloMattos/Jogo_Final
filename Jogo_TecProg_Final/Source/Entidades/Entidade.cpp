@@ -2,7 +2,7 @@
 
 using namespace Entidades;
 
-Entidade::Entidade() : Ente(), direita(1), cima(2), esquerda(3), baixo(4)
+Entidade::Entidade(int semente) : Ente(semente), direita(1), cima(2), esquerda(3), baixo(4)
 {
 	x = 0;
 	y = 0;

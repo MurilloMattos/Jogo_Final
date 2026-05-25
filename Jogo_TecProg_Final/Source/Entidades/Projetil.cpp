@@ -3,12 +3,12 @@
 
 using namespace Entidades;
 
-Projetil::Projetil(): semente_id_entidade(10000) {
+Projetil::Projetil(): Entidade(id_base) {
 
-	setId(semente_id_entidade);
+	//setId(semente_id_entidade);
 	dano = 0;
 
-	cap = nullptr;
+	proprietario = nullptr;
 
 	sf::Vector2f tamanho;
 	tamanho.x = 10.f;
@@ -34,12 +34,12 @@ Projetil::Projetil(): semente_id_entidade(10000) {
 }
 
 
-Projetil::Projetil(float saida_x, float saida_y, int direcao) : semente_id_entidade(10000) {
+Projetil::Projetil(float saida_x, float saida_y, int direcao) : Entidade(id_base) {
 
-	setId(semente_id_entidade);
+	//setId(semente_id_entidade);
 	dano = 0;
 
-	cap = nullptr;
+	proprietario = nullptr;
 
 	sf::Vector2f tamanho;
 	tamanho.x = 5.f;
@@ -79,9 +79,9 @@ void Projetil::setar_Direcao(int direcao) {
 	lado = direcao;
 }
 
-void Entidades::Projetil::setar_Capitao(Entidades::Personagens::Capitao* capitao)
+void Entidades::Projetil::setar_Proprietario(Entidades::Entidade* propriet)
 {
-	cap = capitao;
+	proprietario = propriet;
 }
 
 int Projetil::get_Dano() {
@@ -149,3 +149,5 @@ void Projetil::setar_Cor(sf::Color cor){
 
 	pFigura->setFillColor(cor);
 }
+
+const int Projetil::id_base(10000);

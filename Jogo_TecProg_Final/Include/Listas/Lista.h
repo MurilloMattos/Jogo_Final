@@ -132,12 +132,14 @@ namespace Listas
 
 			while (aux1 != nullptr) {
 
+				//std::cout << "eliminando a Entidade " << std::endl;
 				tamanho_da_lista--;
 				delete aux;
 				aux = aux1;
 				aux1 = aux->getProx();
 			}
 
+			//std::cout << "eliminando a Entidade " << std::endl;
 			tamanho_da_lista--;
 			delete aux;
 		}

@@ -9,10 +9,10 @@ namespace Entidades{
 		{
 			private:
 				int pontos;
-				const int semente_id_entidade;
+				static const int id_base;
 
 				bool segundo_jogador;
-				void setar_Figura();
+				
 
 				bool estado_pulando;
 				bool no_ar;
@@ -24,7 +24,11 @@ namespace Entidades{
 				float gravidade;
 				//float altura_de_pulo;
 
+
 				//sf::Clock tempo;
+
+			private:
+				void setar_Figura();
 
 			public:
 				Jogador();

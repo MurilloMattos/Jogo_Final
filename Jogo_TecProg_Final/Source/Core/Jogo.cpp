@@ -82,10 +82,10 @@ void Jogo::Executar()
         Ger_Graf->getJanela()->clear();
 
         if(fase_1_ativa){
-        atualiza_Camera();
-        setar_Fase();
+            atualiza_Camera();
+            setar_Fase();
 
-        verifica_Fim_De_Jogo();
+            verifica_Fim_De_Jogo();
         }
         else if(fase_2_ativa){
             atualiza_Camera();
@@ -207,6 +207,7 @@ void Jogo::setar_Fase()
 }
 
 void Jogo::atualiza_Camera() {
+    
     Ger_Graf->getJanela()->setView(*Ger_Graf->getCamera());
 
     if(fase_1_ativa){

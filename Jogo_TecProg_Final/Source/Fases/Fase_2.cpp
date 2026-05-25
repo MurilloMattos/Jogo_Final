@@ -15,11 +15,11 @@ Fases::Fase_2::Fase_2() {
 
 	// entre 3 e 6
 	num_capitoes = (rand() % 3) + 3;
-	num_capitoes = 1;
+	//num_capitoes = 1;
 
 	//entre 3 e 8
 	num_piratas = (rand() % 5) + 3;
-	num_piratas = 0;
+	//num_piratas = 0;
 
 	//entre 3 a 4
 	num_espinhos = (rand()%1) + 3;
@@ -59,6 +59,8 @@ Fases::Fase_2::Fase_2() {
 
 	// precisa ser antes que Cria Obstaculos, justamente pq precisa ser setado os inimigos nas plataformas primeiro.
 	Cria_Inimigos();
+
+	//lista_Entidades.imprimir_Ids();
 }
 
 Fases::Fase_2::~Fase_2(){

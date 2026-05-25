@@ -16,7 +16,7 @@ namespace Entidades {
 			sf::Vector2f tamanho;
 
 		public:
-			Personagem();
+			Personagem(int semente);
 			~Personagem();
 
 			const bool get_Eliminado();

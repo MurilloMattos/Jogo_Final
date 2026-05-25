@@ -3,7 +3,7 @@
 using namespace Entidades;
 using namespace Personagens;
 
-Personagem::Personagem() {
+Personagem::Personagem(int semente): Entidade(semente) {
 
 	eliminado = false;
 

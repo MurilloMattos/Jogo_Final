@@ -8,6 +8,7 @@ using namespace Gerenciadores;
 
 Fases::Fase_1::Fase_1() {
 
+	/*
 	i = 0;
 	j = 0;
 
@@ -22,7 +23,7 @@ Fases::Fase_1::Fase_1() {
 	Cria_Obstaculos();
 	Cria_Inimigos();
 	setar_Camera_Fase();
-
+	*/
 }
 
 Fases::Fase_1::~Fase_1(){

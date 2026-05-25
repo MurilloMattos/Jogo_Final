@@ -9,6 +9,7 @@ namespace Entidades
 		float x, y;
 		float gravidade;
 		bool agressivo;
+		//std::ostream buffer;
 		//const int semente_id_jogador;
 		//const int id_set;
 
@@ -23,8 +24,8 @@ namespace Entidades
 		sf::Vector2f centro;
 
 	public:
-		Entidade();
-		~Entidade();
+		Entidade(int semente);
+		virtual ~Entidade();
 
 		float get_Gravidade() const;
 		void setar_Gravidade(float grav);

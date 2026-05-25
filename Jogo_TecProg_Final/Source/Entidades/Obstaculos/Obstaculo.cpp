@@ -4,10 +4,10 @@ using namespace Entidades;
 using namespace Personagens;
 using namespace Obstaculos;
 
-Obstaculo::Obstaculo() : semente_id_entidade(1000)
+Obstaculo::Obstaculo() : Entidade(id_base)
 {
 	agressivo = false;
-	setId(semente_id_entidade);
+	//setId(semente_id_entidade);
 
 	tamanho.x = 0.f;
 	tamanho.y = 0.f;
@@ -24,4 +24,5 @@ void Obstaculo::executar_Gravidade(){
 	y -= gravidade;
 }
 
+const int Obstaculo::id_base(1000);
 

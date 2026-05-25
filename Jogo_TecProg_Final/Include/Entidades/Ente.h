@@ -17,11 +17,11 @@ protected:
 
 public:
 
-	Ente();
+	Ente(int semente);
 	virtual ~Ente();
 	virtual void Executar() = 0;
 	void Desenhar();
-	void setId(int semente);
+	//void setId(int semente);
 	int getId() const;
 	void operator++();
 	void operator--();

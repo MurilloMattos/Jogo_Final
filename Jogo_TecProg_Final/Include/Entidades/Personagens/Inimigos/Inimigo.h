@@ -9,7 +9,7 @@ namespace Entidades {
 		{
 			protected:
 				int nivel_maldade;
-				const int semente_id_entidade;
+				static const int id_base;
 				Jogador* ponteiro_jogador1;
 				Jogador* ponteiro_jogador2;
 				bool perseguir;

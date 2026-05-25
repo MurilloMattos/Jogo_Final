@@ -15,11 +15,12 @@ class Jogo
 
 		Entidades::Personagens::Jogador jogador_1;
 		Entidades::Personagens::Jogador jogador_2;
-		//Menu *menu;
-		//Estado estado;
 
 		Fases::Fase_1 fase1;
 		Fases::Fase_2 fase2;
+
+		//Menu *menu;
+		//Estado estado;
 
 		bool fase_1_ativa;
 		bool fase_2_ativa;
